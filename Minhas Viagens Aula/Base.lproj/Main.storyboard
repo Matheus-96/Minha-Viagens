@@ -48,20 +48,28 @@
         <!--Mapa-->
         <scene sceneID="U6Y-DO-iBE">
             <objects>
-                <viewController id="bXQ-SV-7Dj" sceneMemberID="viewController">
+                <viewController id="bXQ-SV-7Dj" customClass="ViewController" customModule="Minhas_Viagens_Aula" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w1d-Rd-F44">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SzA-5r-vFv">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SzA-5r-vFv">
                                 <rect key="frame" x="0.0" y="44" width="414" height="643"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SzA-5r-vFv" firstAttribute="leading" secondItem="1qq-dB-mMJ" secondAttribute="leading" id="9Za-mC-dcX"/>
+                            <constraint firstItem="SzA-5r-vFv" firstAttribute="bottom" secondItem="1qq-dB-mMJ" secondAttribute="bottom" id="Sar-AR-GLh"/>
+                            <constraint firstItem="SzA-5r-vFv" firstAttribute="top" secondItem="1qq-dB-mMJ" secondAttribute="top" id="cxa-A4-MIT"/>
+                            <constraint firstItem="SzA-5r-vFv" firstAttribute="trailing" secondItem="1qq-dB-mMJ" secondAttribute="trailing" id="udn-VY-b4U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1qq-dB-mMJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa" id="Keh-yY-qgB"/>
+                    <connections>
+                        <outlet property="mapa" destination="SzA-5r-vFv" id="Rix-TX-BEP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9x-Sg-s00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
