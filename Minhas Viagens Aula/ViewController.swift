@@ -34,15 +34,28 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let localizacao = CLLocation(latitude: coordenadas.latitude, longitude: coordenadas.longitude)
             
             //recupera o endereco do ponto selecionado
-            
-            
-            //exibe anotação com os dados do endereço
-            let anotacao = MKPointAnnotation()
-            anotacao.coordinate.latitude = coordenadas.latitude
-            anotacao.coordinate.longitude = coordenadas.longitude
-            anotacao.title = "estou aqui"
-            anotacao.subtitle = "alguem me ajude"
-            mapa.addAnnotation(anotacao)
+            var localCompleto = ""
+            CLGeocoder().reverseGeocodeLocation(localizacao, completionHandler: { (local, erro) in
+                if erro == nil {
+                    if let dadosLocal = local?.first {
+                        if let nome = dadosLocal.name {
+                            localCompleto = nome
+                        } else{
+                            if let endereco = dadosLocal.thoroughfare {
+                                localCompleto = endereco
+                            }
+                        }
+                    }
+                    //exibe anotação com os dados do endereço
+                    let anotacao = MKPointAnnotation()
+                    anotacao.coordinate.latitude = coordenadas.latitude
+                    anotacao.coordinate.longitude = coordenadas.longitude
+                    anotacao.title = localCompleto
+                    self.mapa.addAnnotation(anotacao)
+                } else {
+                    print(erro as Any)
+                }
+            })
         }
     }
     
