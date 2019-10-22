@@ -27,7 +27,9 @@ class ArmazenamentoDados {
     
     func listarViagens() -> [ Dictionary< String, String> ] {
         
+        //usar esse remove quando estiver dando erro ao converter o array de dados
         //getDefaults().removeObject(forKey: chaveArmazenamento)
+        
         let dados = getDefaults().object(forKey: chaveArmazenamento)
         if dados != nil {
             print(dados)
