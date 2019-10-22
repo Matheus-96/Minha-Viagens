@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA1B292235F1D8B00A15528 /* ArmazenamentoDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B291235F1D8B00A15528 /* ArmazenamentoDados.swift */; };
 		0AA5A115235DEBD700BD3758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5A114235DEBD700BD3758 /* AppDelegate.swift */; };
 		0AA5A117235DEBD700BD3758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5A116235DEBD700BD3758 /* SceneDelegate.swift */; };
 		0AA5A119235DEBD700BD3758 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5A118235DEBD700BD3758 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AA1B291235F1D8B00A15528 /* ArmazenamentoDados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmazenamentoDados.swift; sourceTree = "<group>"; };
 		0AA5A111235DEBD700BD3758 /* Minhas Viagens Aula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Minhas Viagens Aula.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA5A114235DEBD700BD3758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AA5A116235DEBD700BD3758 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				0AA5A114235DEBD700BD3758 /* AppDelegate.swift */,
 				0AA5A116235DEBD700BD3758 /* SceneDelegate.swift */,
 				0AA5A118235DEBD700BD3758 /* ViewController.swift */,
+				0AA1B291235F1D8B00A15528 /* ArmazenamentoDados.swift */,
 				0AA5A128235DF49600BD3758 /* LocaisViagensTableViewController.swift */,
 				0AA5A11A235DEBD700BD3758 /* Main.storyboard */,
 				0AA5A11D235DEBD900BD3758 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA5A129235DF49600BD3758 /* LocaisViagensTableViewController.swift in Sources */,
+				0AA1B292235F1D8B00A15528 /* ArmazenamentoDados.swift in Sources */,
 				0AA5A119235DEBD700BD3758 /* ViewController.swift in Sources */,
 				0AA5A115235DEBD700BD3758 /* AppDelegate.swift in Sources */,
 				0AA5A117235DEBD700BD3758 /* SceneDelegate.swift in Sources */,
