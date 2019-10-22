@@ -35,7 +35,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5p2-ge-gbH">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="bXQ-SV-7Dj" kind="show" id="kvv-3J-vdP"/>
+                                <segue destination="bXQ-SV-7Dj" kind="show" identifier="verLocal" id="kvv-3J-vdP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
