@@ -10,12 +10,16 @@ import UIKit
 
 class LocaisViagensTableViewController: UITableViewController {
     
-    let viagens: [String] = [ "São Paulo", "Rio de Janeiro", "Curitiba", "New York"]
+    var locaisViagens: [ Dictionary< String, String > ] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        atualizarViagens()
+    }
+    
 
     // MARK: - Table view data source
 
@@ -24,16 +28,29 @@ class LocaisViagensTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viagens.count
+        return locaisViagens.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        celula.textLabel?.text = viagens[ indexPath.row ]
+        celula.textLabel?.text = locaisViagens[ indexPath.row ]["local"]
 
         return celula
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            ArmazenamentoDados().removerViagem( indice: indexPath.row )
+            atualizarViagens()
+        }
+    }
+    
+    func atualizarViagens() {
+        locaisViagens = ArmazenamentoDados().listarViagens()
+        tableView.reloadData()
     }
 
     /*

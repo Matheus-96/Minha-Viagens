@@ -32,14 +32,21 @@ class ArmazenamentoDados {
         
         let dados = getDefaults().object(forKey: chaveArmazenamento)
         if dados != nil {
-            print(dados)
             return dados as! Array
         }else{
             return []
         }
     }
     
-    func removerViagem(){
+    func removerViagem(indice : Int){
+        
+        viagens = listarViagens()
+        
+        viagens.remove(at: indice)
+        getDefaults().removeObject(forKey: chaveArmazenamento)
+        
+        getDefaults().set(viagens, forKey: chaveArmazenamento)
+        getDefaults().synchronize()
         
     }
     
